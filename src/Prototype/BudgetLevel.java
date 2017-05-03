@@ -60,5 +60,17 @@ public class BudgetLevel extends Parent implements Cloneable{
         return budgetLevel;
     }
 
+    public static int getSumArea(BudgetLevel iamMain, List<BudgetLevel> budgetLevels) {
+        int sum = 0;
+        for (BudgetLevel inst:
+                budgetLevels) {
+            if (inst.getParent()==null) continue;
+            if (inst.getParent().equals(iamMain))
+            {
+                sum += inst.getBudget();
+            }
+        }
+        return sum;
+    }
 
 }

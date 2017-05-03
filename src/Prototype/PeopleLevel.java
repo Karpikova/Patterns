@@ -60,6 +60,18 @@ public class PeopleLevel extends Parent implements Cloneable {
         return peopleLevel;
     }
 
+    public static int getSumArea(PeopleLevel iamMain, List<PeopleLevel> peopleLevels) {
+        int sum = 0;
+        for (PeopleLevel inst:
+                peopleLevels) {
+            if (inst.getParent()==null) continue;
+            if (inst.getParent().equals(iamMain))
+            {
+                sum += inst.getPeople();
+            }
+        }
+        return sum;
+    }
 
 }
 
