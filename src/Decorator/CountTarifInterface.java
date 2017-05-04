@@ -1,0 +1,15 @@
+package Decorator;
+
+/*
+ * ${Classname}
+ * 
+ * Version 1.0 
+ * 
+ * 04.05.2017
+ * 
+ * Karpikova
+ */
+public interface CountTarifInterface {
+    void processTariff();
+
+}
